@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 21, 2021 at 02:58 AM
--- Server version: 10.1.48-MariaDB
--- PHP Version: 7.2.30
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 21-02-2021 a las 05:46:51
+-- Versión del servidor: 10.1.38-MariaDB
+-- Versión de PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `miemutwn_db`
+-- Base de datos: `hugo_aguilar`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservas`
+-- Estructura de tabla para la tabla `reservas`
 --
 
 CREATE TABLE `reservas` (
@@ -41,18 +42,19 @@ CREATE TABLE `reservas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `reservas`
+-- Volcado de datos para la tabla `reservas`
 --
 
 INSERT INTO `reservas` (`id`, `start`, `end`, `reserva`, `nombre`, `correo`, `telefono`, `comentarios`, `cantAdultos`, `cantNiños`) VALUES
 (1, '2021-01-16', '2021-01-17', 'Cabaña', 'Cielo  Marcolini', 'mariacielomarcolini@gmail.com', '3564618152', 'buen dia queria saber precios y disponibilidad, los niños tienen 5 años y 3 meses. gracias', 2, 2),
 (2, '2021-02-14', '2021-02-17', 'Cabaña', 'Marcos Contarde', 'elianaartaz@gmail.com', '3425581568', 'Hola me gustaria un presupuesto de esos dias y saber de que forma se realiza el pago. Desde ya gracias.', 4, 0),
-(3, '2021-02-04', '2021-02-06', 'Cabaña', 'Mara  Ceriani ', 'maraceriani@hotmail.com', '3424236986', 'Hola cabaña o quinta para 6 o 7 personas tendrán? Con pileta ', 3, 3);
+(3, '2021-02-04', '2021-02-06', 'Cabaña', 'Mara  Ceriani ', 'maraceriani@hotmail.com', '3424236986', 'Hola cabaña o quinta para 6 o 7 personas tendrán? Con pileta ', 3, 3),
+(4, '2021-02-25', '2021-02-28', 'Cabaña', 'Manuel Domínguez Apellido', 'correo@yhdi.com', '+13671828981', '¿Hay servicio de desayuno?', 4, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservas_cabana`
+-- Estructura de tabla para la tabla `reservas_cabana`
 --
 
 CREATE TABLE `reservas_cabana` (
@@ -60,7 +62,7 @@ CREATE TABLE `reservas_cabana` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `reservas_cabana`
+-- Volcado de datos para la tabla `reservas_cabana`
 --
 
 INSERT INTO `reservas_cabana` (`fecha`) VALUES
@@ -72,12 +74,16 @@ INSERT INTO `reservas_cabana` (`fecha`) VALUES
 ('2021-02-14'),
 ('2021-02-15'),
 ('2021-02-16'),
-('2021-02-17');
+('2021-02-17'),
+('2021-02-25'),
+('2021-02-26'),
+('2021-02-27'),
+('2021-02-28');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reservas_quinta`
+-- Estructura de tabla para la tabla `reservas_quinta`
 --
 
 CREATE TABLE `reservas_quinta` (
@@ -87,7 +93,7 @@ CREATE TABLE `reservas_quinta` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -97,57 +103,58 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`idUs`, `nameUs`, `passUs`) VALUES
 (1, 'Mariana', 'c1670254e9ecc829dbeb35af3bd00b0d'),
 (2, 'GMA', '767f4f24dc8a8467db8a0754da4f40da'),
-(3, 'MarianaMariana', '66f35ef0488bf34e65eb8a39b56d4896');
+(3, 'MarianaMariana', '66f35ef0488bf34e65eb8a39b56d4896'),
+(4, 'Gonzalo', '4c882dcb24bcb1bc225391a602feca7c');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `reservas`
+-- Indices de la tabla `reservas`
 --
 ALTER TABLE `reservas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `reservas_cabana`
+-- Indices de la tabla `reservas_cabana`
 --
 ALTER TABLE `reservas_cabana`
   ADD PRIMARY KEY (`fecha`);
 
 --
--- Indexes for table `reservas_quinta`
+-- Indices de la tabla `reservas_quinta`
 --
 ALTER TABLE `reservas_quinta`
   ADD PRIMARY KEY (`fecha`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`idUs`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `reservas`
+-- AUTO_INCREMENT de la tabla `reservas`
 --
 ALTER TABLE `reservas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `idUs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idUs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
