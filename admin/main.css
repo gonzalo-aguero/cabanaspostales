@@ -1,0 +1,209 @@
+*{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly; 
+    align-items: center;
+    background: #1f1f3d;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+header h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+#cerrarSesion{
+    background: #eb6868;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+#cerrarSesion:hover{
+    background: #cf5454;
+}
+#tittle{
+    font-size: 50px;
+    text-align:center;
+}
+#subtitle{
+    font-size: 30px;
+    text-align:center;
+}
+#aviso{
+    font-size: 18px;
+    text-align:center;
+}
+.cabeceraTabla{
+    background: rgb(31, 31, 61);
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.botones{
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn{
+    cursor:pointer;
+    font-weight: bold;
+    display:inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+.btnActualizar{
+    background: #6dd46d;
+    color: white;
+}
+.btnActualizar:hover{
+    background: #64be64;
+}
+.btnEditar{
+    background: #32cfba;
+    color: white;
+}
+.btnEditar:hover{
+    background: #2cb8a5;
+}
+.btnEliminar{
+    background: #e03a3a;
+    color: white;
+}
+.btnEliminar:hover{
+    background: #ce3737;
+}
+table{
+    display:block;
+    height: 300px;
+    overflow: auto;
+}
+table input[type="checkbox"]{
+    transform: scale(1.5,1.5);
+    margin: 10px;
+}
+table tr{
+    display:block;
+    border-bottom: 1px #cacaca solid;
+    text-align:center;
+    display: flex;
+    flex-flow: row nowrap;
+    text-align:center;
+    padding: 5px;
+}
+table th{
+    padding: 15px;
+    width: 12.5%;
+}
+table td{
+    width: 12.5%;
+    max-height: 75px;
+    overflow: auto;
+}
+#formEdit{
+    position: fixed;
+    left:0;top:0;width:100%;height:100%;
+    display:none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+#formEdit > div{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    background: white;
+    max-width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.cabecera{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    background: #1f1f3d;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    
+    font-weight: bold;
+}
+#btnCloseFormEdit{
+    font-weight: lighter;
+    cursor:pointer;
+    transition:0.2s;
+}
+#btnCloseFormEdit:hover{
+    transform: scale(0.95,0.95);
+    transition:0.2s;
+}
+#formEdit > div > form{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 30px;
+}
+@media screen and (max-width: 600px){
+    table{
+        height: 500px;
+        font-size: 14px;
+    }
+    table tr{
+        width: 150%;
+    }
+}
+@media screen and (max-width: 450px){
+    #tittle{
+        font-size: 35px;
+    }
+    #subtitle{
+        font-size: 25px;
+    }
+    #aviso{
+        font-size: 16px;
+    }
+    table{
+        font-size: 13px;
+    }
+    table tr{
+        width: 175%;
+    }
+}
+@media screen and (max-width: 350px){
+    header{
+        flex-flow: row wrap;
+    }
+    #tittle{
+        font-size: 28px;
+    }
+    #subtitle{
+        font-size: 20px;
+    }
+    #aviso{
+        font-size: 13px;
+    }
+    table tr{
+        width: 200%;
+    }
+}
+@media screen and (max-width: 280px){
+    header h1{
+        font-size: 25px;
+    }
+}

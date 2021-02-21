@@ -1,0 +1,223 @@
+header > nav{
+    position: relative;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255);
+    font-family: var(--fontGroup);
+    -webkit-box-shadow: 0px -5px 10px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -5px 10px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px -5px 10px 5px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+header > nav > div{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-left: 100px;
+}
+header > nav > div > img{
+    height: 80px;
+}
+header > nav ul{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+header > nav ul li a{
+    display:flex;
+    font-size: 22px;
+    color: #747474;
+    height: 100px;
+    align-items: center;
+    padding-left:20px;
+    padding-right:20px;
+    transition: 0.3s;
+}
+header > nav ul li a:hover{
+    color: #acd044;
+    transition: 0.3s;
+}
+#btnOpenMenu{
+    display:none;
+    transition:0.3s;
+    height:60px;
+    margin-right: 50px;
+}
+#btnOpenMenu:active{
+    transform: scale(0.9,0.9);
+    transition:0.3s;
+}
+#btnCloseMenu{
+    display:none;
+    position:fixed;
+    z-index: 10;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    right: 5%;
+    top: 5%;
+    transition:0.3s;
+    color: var(--grisOscuro);
+    font-size: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-family: Helvetica;
+    font-weight: lighter;
+    text-align: center;
+}
+#btnCloseMenu:active{
+    transform: scale(0.9,0.9);
+    transition:0.3s;
+}
+
+
+
+
+@media screen and (max-width: 1120px){
+    header > nav > div{
+        margin-left: 50px;
+    }
+    header > nav ul{
+        margin-right: 50px;
+    }
+    header > nav ul li a{
+        font-size: 20px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+}
+@media screen and (max-width: 920px){
+    header > nav > div > img{
+        height: 60px;
+    }
+    header > nav ul li a{
+        font-size: 18px;
+        padding-left:15px;
+        padding-right:15px;
+    }
+}
+@media screen and (max-width: 820px){
+    header > nav{
+        position: relative;
+        height: 80px;
+        z-index: 100;
+    }
+    header > nav ul{
+        display:none;
+        position:fixed;
+        left: 0;
+        top: 0;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        background: rgba(0,0,0,0.75);
+        width:100%;
+        height:100%;
+        overflow-y: auto;
+        padding-top: 100px;
+        z-index: 10;
+    }
+    header > nav ul li a{
+        display:none;
+        font-size: 25px;
+        width: 500px;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+    }
+    #btnOpenMenu{
+        display:block;
+    }
+    #btnCloseMenu{
+        display:flex;
+    }
+}
+@media screen and (max-width: 500px){
+    header > nav > div{
+        margin-left: 25px;
+    }
+    header > nav ul li a{
+        font-size: 30px;
+        width: 400px;
+    }
+    #btnOpenMenu{
+        margin-right: 25px;
+    }
+}
+@media screen and (max-width: 400px){
+    header > nav > div > img{
+        height: 50px;
+    }
+    header > nav ul{
+        padding-top: 0px;
+    }
+    header > nav ul li a{
+        font-size: 25px;
+        width: 300px;
+        height: 80px;
+    }
+    #btnOpenMenu{
+        height:50px;
+    }
+}
+@media screen and (max-width: 300px){
+    header > nav{
+        height: 70px;
+    }
+    header > nav > div{
+        margin-left: 15px;
+    }
+    header > nav > div > img{
+        height: 40px;
+    }
+    header > nav ul li a{
+        width: 250px;
+        height: 75px;
+    }
+    #btnOpenMenu{
+        height:40px;
+        margin-right: 15px;
+    }
+    #btnCloseMenu{
+        font-size: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width: 250px){
+    header > nav{
+        height: 60px;
+    }
+    header > nav > div > img{
+        height: 30px;
+    }
+    header > nav ul li a{
+        width: 200px;
+        height: 70px;
+    }
+    #btnOpenMenu{
+        height:30px;
+    }
+}
+@media screen and (max-width: 200px){
+    header > nav{
+        height: 50px;
+    }
+    header > nav > div > img{
+        height: 20px;
+    }
+    header > nav ul li a{
+        font-size: 15px;
+        width: 100px;
+        height: 50px;
+    }
+    #btnOpenMenu{
+        height:25px;
+    }
+}

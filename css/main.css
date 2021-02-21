@@ -1,0 +1,1006 @@
+/* font: Open Sans */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+/* font: Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600%2C700%7CMontserrat%3A400%2C500%2C600%2C700%2C800%2C900%7CRoboto+Condensed%3A400%2C600%2C700%7COpen+Sans%3A400%2C600%2C700&#038;ver=7.6.0');
+/* font: Source Sans Pro */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root{
+    /* Fuentes */
+    --font1: 'Open Sans';
+    --font2: sans-serif;
+    --font3: 'Montserrat';
+    --fontGroup: 'Open Sans','sans-serif','Montserrat';
+    --font4: 'Source Sans Pro';
+    /* Colores */
+    --grisOscuro: #747474;
+    --blancoSuavizado: #f7f7f7;
+    --verdeLogo: #acd044;
+}
+body{
+    position:relative;
+    overflow-y: hidden;
+    background: url('../img/fondo/8.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* backdrop-filter: brightness(175%); */
+}
+body:before{
+    content:"";
+    position:absolute;
+    left:0;top:0;width:100%;height:100%;
+    background: rgba(0,0,0,0.25);
+    z-index: -1;
+}
+.portada{
+    font-family: var(--fontGroup);
+    font-size: 50px;
+    text-align:center;
+}
+.portada > div{
+    height: 600px;
+}
+.portada > div:before{
+    content:"";
+    position: absolute;
+    left:0;top:0;width:100%;height:100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.portada > div > .div-portada{
+    position:absolute;
+    left:0;top:0;width:100%;height:100%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 2;
+    color:var(--blancoSuavizado);
+}
+.titlePortada{ 
+    text-shadow: 5px 3px 3px rgb(0 0 0 / 28%);
+    font-size: 50px;
+    font-weight: lighter;
+    width:70%;
+}
+/* start seccion tarjetas */
+.section-tarjetas{
+    padding: 10%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#div-tarjetas{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+#div-tarjetas > h1{
+    font-family: var(--fontGroup);
+    font-size: 40px;
+    color: var(--verdeLogo);
+    text-align:center;
+    padding: 5%;
+    text-shadow: 0px 1px 1px rgb(128 128 128);
+}
+.tarjeta{
+    width: 90%;
+    height: 350px;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    -webkit-box-shadow: -4px -4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px -4px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -4px -4px 5px 0px rgba(0,0,0,0.75);
+    /* border-right: 1px #c2c2c2 solid;
+    border-bottom: 1px #c2c2c2 solid; */
+    background: rgba(0,0,0,0.5);
+}
+#tarjetaCabaña{
+    margin-bottom: 100px;
+}
+.imgTarjeta{
+    position: relative;
+    z-index: 0;
+    width: 40%;
+    background-size: 100% 100%;
+    color:var(--blancoSuavizado);
+    text-shadow: 3px 1px 1px rgba(0, 0, 0, 0.5);
+    font-family: var(--fontGroup);
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.imgTarjeta:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    transition: 0.3s;
+    z-index: 1;
+}
+#imgTarjetaQuinta:before{
+    background: rgba(0,0,0,0.1);
+}
+.imgTarjeta > h1,
+.imgTarjeta > h2,
+.imgTarjeta > h3{
+    font-weight: lighter;
+    position: relative;
+    z-index: 2;
+}
+.imgTarjeta > h1{
+    font-size: 40px;
+}
+.imgTarjeta > h2{
+    font-size: 24px;
+}
+.imgTarjeta > h3{
+    font-size: 20px;
+}
+.tarjeta > ._2{
+    width: 60%;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    font-family: sans-serif;
+    font-family: var(--fontGroup);
+}
+.textoTarjeta{
+    padding: 5%;
+}
+.textoTarjeta h1{
+    text-align:center;
+    color: var(--verdeLogo);
+    font-size:30px;
+    margin-bottom: 10px;
+}
+.textoTarjeta p{
+    /* color: #2b2a2a; */
+    color: #f0f0f0;
+    font-size:20px;
+}
+.botonesTarjeta{
+    display:flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: flex-end;
+    align-content: space-around;
+}
+.botonesTarjeta > a{
+    margin: 15px;
+}
+/* end seccion tarjetas */
+/* start videos YT */
+#videos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#videos iframe{
+    width: 470px;
+    height: 260px;
+}
+/* end videos YT */
+/* start ubicacion */
+.section-ubicacion{
+    position:relative;
+    padding: 5%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: var(--fontGroup);
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.75);
+}
+.section-ubicacion:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+    z-index: 1;
+}
+.section-ubicacion > div{
+    position:relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    z-index:1;
+}
+.section-ubicacion > div > h1{
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+#mapa{
+    width: 600px;
+    height: 450px;
+    border-radius: 20px;
+}
+/* end ubicacion */
+/* start footer */
+footer{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+footer:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:0;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000000f2 20%,#000000bf 50%, #000000a6 60%,#000000bf 70%,#000000f2 100%);
+    transition: 0.3s;
+    z-index: 1;
+}
+footer > div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+footer > ._1{
+    padding: 5%;
+}
+footer > ._1 > img{
+    width: 30%;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%); 
+}
+footer > ._2{
+    padding: 5%;
+    padding-top: 0;
+    align-items: flex-start;
+}
+footer > ._2 > div{
+    font-family: var(--fontGroup);
+    color: var(--blancoSuavizado);
+    font-size: 15px;
+    width: 50%;
+    text-align: center;
+}
+footer > ._2 > div h1{
+    font-weight: lighter;
+    color: var(--verdeLogo);
+}
+#indiceFooter{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+}
+#indiceFooter li{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#indiceFooter li a{
+    color: white;
+    font-size: 20px;
+    width: 100%;
+    padding: 2%;
+    transition: 0.3s;
+}
+#indiceFooter li a:hover{
+    color: var(--verdeLogo);
+    transition: 0.3s;
+}
+/* end footer */
+/* start elementos generales */
+.btnCerrar{
+    position: absolute;
+    right:5%;
+    top: 5%;
+    font-family: var(--font1), var(--font2);
+    font-weight: bold;
+    font-size: 30px;
+    cursor:pointer;
+}
+.socialList{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 15px;
+    transition:0.3s;
+    width:100%;
+}
+.socialList > li:hover{
+    transform: scale(0.95,0.95);
+    opacity: 75%;
+    transition:0.5s;
+}
+.socialList img{
+    width: 42px;
+}
+#socialListUbicacion{
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+#socialListFooter{
+    justify-content: space-evenly;  
+}
+#socialListFooter li{
+    -webkit-filter: grayscale(25%);
+    -moz-filter: grayscale(25%);
+    -ms-filter: grayscale(25%);
+    -o-filter: grayscale(25%);
+    filter: grayscale(25%); 
+}
+#socialListFooter li:hover{
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%); 
+}
+.div-pantallaCompleta{
+    display:none;
+    position: fixed;
+    left:0;top:0;width:100%;height:100%;
+    z-index:1000;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.div-W-aviso{
+    background: rgba(0,0,0,0.5);
+}
+.W-aviso{
+    /* -webkit-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.75); */
+    background: rgba(0, 0, 0, 0.5);
+    width: 40%;
+    height: auto;
+    display:flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    text-align:center;
+    font-family: var(--fontGroup);
+    padding: 2.5%;
+}
+.W-aviso h1{
+    color: var(--verdeLogo);
+    margin-bottom: 10px;
+}
+.W-aviso p{
+    /* color: #272727; */
+    color: #dbdbdb;
+    font-size: 16px;
+}
+.W-aviso > div{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    margin-top: 35px;
+}
+.W-aviso > div > a{
+    background: var(--verdeLogo);
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 3.5%;
+    transition: 0.1s;
+    border-radius: 5px;
+    margin: 10px;
+    cursor:pointer;
+}
+.W-aviso > div > a:hover{
+    background: #9fbe3f;
+    transition: 0.2s;
+}
+.title1{
+    color: var(--verdeLogo);
+    font-size: 60px;
+    text-align:center;
+}
+.btn{
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.btnVerde{
+    background: #acd044;
+    color: white;
+}
+.btnVerde:hover{
+    background: #a1c23e;
+}
+.btnAzul{
+    background: #449dd0;
+    color: white;
+}
+.btnAzul:hover{
+    background: #3e8fbe;
+}
+/* end elementos generales */
+
+
+
+
+@media screen and (max-width: 1350px){
+    /* start seccion tarjetas */
+    .textoTarjeta h1{
+        font-size:28px;
+    }
+    .textoTarjeta p{
+        font-size:18px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 380px;
+        height: 209px;
+    }
+    /* end videos YT */
+}
+@media screen and (max-width: 1080px){
+    /* start seccion tarjetas */
+    .tarjeta{
+        height: 300px;
+    }
+    .textoTarjeta h1{
+        font-size:25px;
+    }
+    .textoTarjeta p{
+        font-size:15px;
+    }
+    .botonesTarjeta > a{
+        margin: 10px;
+        margin-top: 0;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 340px;
+        height: 187px;
+    }
+    /* end videos YT */
+}
+@media screen and (max-width: 960px){
+    /* start videos YT */
+    #videos iframe{
+        width: 300px;
+        height: 165px;
+    }
+    /* end videos YT */
+}
+@media screen and (max-width: 920px){
+    /* start ubicacion */
+    #mapa{
+        width: 400px;
+        height: 400px;
+    }
+    /* end ubicacion */
+}
+@media screen and (max-width: 860px){
+    /* start seccion tarjetas */
+    .tarjeta{
+        height: 250px;
+    }
+    .imgTarjeta > h2{
+        font-size: 20px;
+    }
+    .imgTarjeta > h3{
+        font-size: 18px;
+    }
+    .textoTarjeta h1{
+        font-size:22px;
+    }
+    .textoTarjeta p{
+        font-size:13px;
+    }
+    .botonesTarjeta > a{
+        margin-top: 0;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 270px;
+        height: 149px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .W-aviso{
+        width: 75%;
+    }
+    .btn{
+        padding: 9px;
+        font-size: 17px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 760px){
+    /* start seccion tarjetas */
+    .tarjeta{
+        height: 220px;
+    }
+    #tarjetaCabaña{
+        margin-bottom: 50px;
+    }
+    .imgTarjeta > h1{
+        font-size: 30px;
+    }
+    .imgTarjeta > h2{
+        font-size: 18px;
+    }
+    .imgTarjeta > h3{
+        font-size: 16px;
+    }
+    .textoTarjeta h1{
+        font-size:20px;
+        margin-bottom: 2px;
+    }
+    .textoTarjeta p{
+        font-size:12px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos{
+        justify-content: center;
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #videos iframe{
+        width: 430px;
+        height: 237px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .btn{
+        padding: 7px;
+        font-size: 14px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 680px){
+    /* start seccion tarjetas */
+    #div-tarjetas > h1{
+        font-size: 30px;
+    }
+    .tarjeta{
+        height: 200px;
+    }
+    .imgTarjeta > h1{
+        font-size: 26px;
+    }
+    .imgTarjeta > h2{
+        font-size: 17px;
+    }
+    .imgTarjeta > h3{
+        font-size: 15px;
+    }
+    .textoTarjeta h1{
+        font-size:19px;
+        margin-bottom: 5px;
+    }
+    .textoTarjeta p{
+        font-size:11px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 400px;
+        height: 220px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .btn{
+        font-size: 13px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 640px){
+    /* start ubicacion */
+    #mapa{
+        width: 300px;
+        height: 300px;
+    }
+    /* end ubicacion */
+}
+@media screen and (max-width: 600px){
+    /* start portada */
+    .titlePortada{ 
+        font-size: 40px;
+    }   
+    /* end portada */
+    /* start seccion tarjetas */
+    #div-tarjetas{
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    #div-tarjetas > h1{
+        font-size: 28px;
+    }
+    .tarjeta{
+        width: 80%;
+        height: auto;
+        flex-flow: column;
+        justify-content: center;
+        align-content: space-evenly;
+    }
+    .imgTarjeta{
+        width: 100%;
+        height: 200px;
+    }
+    .imgTarjeta > h1{
+        font-size: 30px;
+    }
+    .tarjeta > ._2{
+        width: 100%;
+    }
+    .textoTarjeta h1{
+        font-size:20px;
+        margin-bottom: 10px;
+    }
+    .textoTarjeta p{
+        font-size:13px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 360px;
+        height: 198px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .title1{
+        font-size: 50px;
+    }
+    .btn{
+        padding: 8px;
+        font-size: 15px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 500px){
+    /* start ubicacion */
+    .section-ubicacion{
+        flex-flow: column;
+        justify-content: center;
+        align-content: space-evenly;
+    }
+    .section-ubicacion > div{
+        width:100%;
+    }
+    .section-ubicacion > div > h1{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 28px;
+    }
+    #mapa{
+        width: 100%;
+        height: 300px;
+    }
+    /* end ubicacion */
+    /* start footer */
+    footer > div{
+        flex-flow: column;
+        justify-content: center;
+        align-content: center;
+    }
+    footer > ._2 > div{
+        width: 100%;
+    }
+    footer > ._2 > div h1{
+        font-size: 20px;
+    }
+    #indiceFooter li a{
+        font-size: 15px;
+        padding: 2%;
+    }
+    #indiceFooter li a:hover{
+        font-weight: normal;
+    }
+    #indiceFooter li a:active{
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    /* end footer */
+    /* start elementos generales */
+     .title1{
+        font-size: 38px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 450px){
+    .titlePortada{ 
+        width: 85%;
+    }   
+    #div-tarjetas > h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 400px){
+    /* start portada */
+    .titlePortada{ 
+        font-size: 35px;
+    }   
+    /* end portada */
+    /* start seccion tarjetas */
+    .section-tarjetas{
+        padding: 7%;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    #div-tarjetas > h1{
+        font-size: 22px;
+    }
+    .imgTarjeta{
+        height: 150px;
+    }
+    .textoTarjeta h1{
+        font-size:18px;
+        margin-bottom: 8px;
+    }
+    .textoTarjeta p{
+        font-size:12px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 260px;
+        height: 143px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .btn{
+        font-size: 14px;
+    }
+    /* end elementos generales */
+    /* start ubicacion */
+    .section-ubicacion > div > h1{
+        font-size: 22px;
+    }
+    #mapa{
+        height: 240px;
+    }
+    /* end ubicacion */
+    /* start footer */
+    footer > ._2 > div h1{
+        margin-top: 15px;
+        font-size: 25px;
+    }
+    #indiceFooter li a{
+        font-size: 15px;
+        padding: 2%;
+    }
+    /* end footer */
+    /* start elementos generales */
+    .socialList img{
+        width: 30px;
+    }
+    .W-aviso h1{
+        margin-bottom: 20px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 360px){
+    /* start seccion tarjetas */
+    #div-tarjetas > h1{
+        padding: 10%;
+    }
+    .imgTarjeta{
+        height: 140px;
+    }
+    .textoTarjeta h1{
+        font-size:16px;
+        margin-bottom: 6px;
+    }
+    .textoTarjeta p{
+        font-size:11px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 230px;
+        height: 126px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .title1{
+        font-size: 28px;
+    }
+    .W-aviso{
+        width: 85%;
+    }
+    .W-aviso h1{
+        margin-bottom: 10px;
+    }
+    .W-aviso p{
+        font-size: 13px;
+    }
+    .W-aviso > div > a{
+        font-size: 16px;
+        margin: 0px;
+    }
+    .btn{
+        border-radius: 3px;
+        font-size: 13px;
+        padding: 7px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 320px){
+    .titlePortada{ 
+        font-size: 30px;
+    }   
+    /* start ubicacion */
+    .section-ubicacion > div > h1{
+        font-size: 20px;
+    }
+    #mapa{
+        height: 200px;
+    }
+    /* end ubicacion */
+}
+@media screen and (max-width: 280px){
+    /* start seccion tarjetas */
+    .section-tarjetas{
+        padding: 0;
+    }
+    #div-tarjetas > h1{
+        font-size: 20px;
+    }
+    .imgTarjeta{
+        height: 110px;
+    }
+    .imgTarjeta > h1{
+        font-size: 24px;
+    }
+    .imgTarjeta > h2{
+        font-size: 15px;
+    }
+    .imgTarjeta > h3{
+        font-size: 14px;
+    }
+    .textoTarjeta h1{
+        font-size:12px;
+        margin-bottom: 3px;
+    }
+    .textoTarjeta p{
+        font-size:9px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 200px;
+        height: 110px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    /* start elementos generales */
+    .title1{
+        font-size: 22px;
+    }
+    .btn{
+        font-size: 10px;
+        padding: 5px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 250px){
+    /* start ubicacion */
+    .section-ubicacion > div > h1{
+        font-size: 16px;
+    }
+    #mapa{
+        height: 150px;
+    }
+    /* end ubicacion */
+    /* start elementos generales */
+    .socialList img{
+        width: 22px;
+    }
+    /* end elementos generales */
+}
+@media screen and (max-width: 200px){
+    /* start portada */
+    .titlePortada{ 
+        font-size: 20px;
+    }  
+    /* end portada */
+    /* start seccion tarjetas */
+    #div-tarjetas > h1{
+        font-size: 16px;
+        padding-top: 15%;
+        padding-bottom: 15%;
+    }
+    .imgTarjeta{
+        height: 80px;
+    }
+    .imgTarjeta > h1{
+        font-size: 20px;
+    }
+    .textoTarjeta h1{
+        font-size:10px;
+        margin-bottom: 2px;
+    }
+    .textoTarjeta p{
+        font-size:7px;
+    }
+    /* end seccion tarjetas */
+    /* start videos YT */
+    #videos iframe{
+        width: 160px;
+        height: 88px;
+    }
+    /* end videos YT */
+    /* start elementos generales */
+    .btn{
+        font-size: 9px;
+    }
+    /* end elementos generales */
+    /* start ubicacion */
+    .section-ubicacion > div > h1{
+        font-size: 13px;
+    }
+    #mapa{
+        height: 120px;
+    }
+    /* end ubicacion */
+}
+@media screen and (max-width: 150px){
+    /* start ubicacion */
+    .section-ubicacion > div > h1{
+        font-size: 9px;
+    }
+    #mapa{
+        height: 90px;
+    }
+    /* end ubicacion */
+}

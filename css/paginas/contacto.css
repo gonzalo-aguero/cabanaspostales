@@ -1,0 +1,37 @@
+@import url('cabanayquinta.css');
+.section-contenido{
+    padding: 5%;
+}
+#descripcion h2{
+    text-align:center;
+    color:white;
+}
+#socialListContacto{
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 600px){
+    #descripcion h2{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 400px){
+    #socialListContacto{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 360px){
+    #descripcion h2{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 250px){
+    #descripcion h2{
+        font-size: 12px;
+    }
+    #socialListContacto{
+        margin-top: 20px;
+    }
+}

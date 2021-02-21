@@ -1,0 +1,75 @@
+#contenedor-Calendario{
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fontGroup);
+    font-size: 16px;
+}
+#calendar{
+    width: 60%;
+    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5%;
+    border-radius: 10px;
+    color:white;
+}
+@media screen and (max-width: 600px){
+    #contenedor-Calendario{
+        font-size: 14px;
+    }
+    #calendar{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px){
+    #contenedor-Calendario{
+        font-size: 10px;
+    }
+    #calendar{
+        width: 100%;
+    }
+    .fc-daygrid-day-number{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 350px){
+    #contenedor-Calendario{
+        font-size: 8px;
+    }
+    .fc-daygrid-day-number{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 270px){
+    #contenedor-Calendario{
+        font-size: 7px;
+    }
+    .fc-daygrid-day-number{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 240px){
+    #contenedor-Calendario{
+        font-size: 6px;
+    }
+    .fc-daygrid-day-number{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 210px){
+    #contenedor-Calendario{
+        font-size: 5px;
+    }
+    .fc-daygrid-day-number{
+        font-size: 7px;
+    }
+}
+@media screen and (max-width: 180px){
+    #contenedor-Calendario{
+        font-size: 4px;
+    }
+    .fc-daygrid-day-number{
+        font-size: 6px;
+    }
+}
