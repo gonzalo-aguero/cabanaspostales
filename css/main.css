@@ -1,7 +1,5 @@
 /* font: Open Sans */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
-/* font: Montserrat */
-@import url('https://fonts.googleapis.com/css?family=Roboto%3A400%2C500%2C600%2C700%7CMontserrat%3A400%2C500%2C600%2C700%2C800%2C900%7CRoboto+Condensed%3A400%2C600%2C700%7COpen+Sans%3A400%2C600%2C700&#038;ver=7.6.0');
 /* font: Source Sans Pro */
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 *{
@@ -19,8 +17,7 @@
     /* Fuentes */
     --font1: 'Open Sans';
     --font2: sans-serif;
-    --font3: 'Montserrat';
-    --fontGroup: 'Open Sans','sans-serif','Montserrat';
+    --fontGroup: 'Open Sans','sans-serif';
     --font4: 'Source Sans Pro';
     /* Colores */
     --grisOscuro: #747474;
