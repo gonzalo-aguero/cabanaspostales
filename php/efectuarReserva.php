@@ -45,7 +45,7 @@ $msg =
     .'Comentarios: '.$comentarios."\n"
     ."\n\n\n"
     .'Este es un mensaje enviado automáticamente, no responder.';
-$emailReceptor = "postalesdesauce@gmail.com";
+$emailReceptor = "gonzaloaguerodev@gmail.com";
 $emailEmisor = "notificaciones@cabanaspostalesdesauce.com";
 $emailCliente = $correo;
 $header = "From: ".$emailEmisor. "\r\n";
